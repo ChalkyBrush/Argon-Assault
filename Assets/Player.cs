@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
+    [Header("SomeHeader")]
     [Tooltip("In ms/s")][SerializeField] float xSpeed = 12f;
     [Tooltip("In ms/s")][SerializeField] float ySpeed = 8f;
 
+    [Header("SomeOtherHeader")]
     [SerializeField] float positionPitchFactor = -3f;
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float positionYawFactor = 3f;
@@ -17,6 +19,8 @@ public class Player : MonoBehaviour
 
     float xThrow;
     float yThrow;
+
+    bool isControlEnabled = true;
 
     
     
@@ -30,8 +34,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
 
     private void ProcessTranslation()
@@ -62,5 +69,10 @@ public class Player : MonoBehaviour
         float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    void OnPlayerDeath()
+    {
+        isControlEnabled = false;
     }
 }
