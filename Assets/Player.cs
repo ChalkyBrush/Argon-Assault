@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 public class Player : MonoBehaviour
 {
-    [Tooltip("In ms/s")][SerializeField] float xSpeed = 16f;
-    [Tooltip("In ms/s")][SerializeField] float ySpeed = 10f;
+    [Tooltip("In ms/s")][SerializeField] float xSpeed = 12f;
+    [Tooltip("In ms/s")][SerializeField] float ySpeed = 8f;
 
     [SerializeField] float positionPitchFactor = -3f;
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float positionYawFactor = 3f;
     [SerializeField] float controlRollFactor = -20f;
 
-    int xBounds = 8;
-    int yBounds = 4;
+    float xBounds = 5.2f;
+    float yBounds = 4.8f;
 
     float xThrow;
     float yThrow;
