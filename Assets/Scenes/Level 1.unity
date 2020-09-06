@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 200
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -1784,7 +1784,7 @@ PrefabInstance:
     - target: {fileID: 2944935786244461157, guid: 7095c42ecc79bf54aac8cb261dc348a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 249.42496
+      value: 249.425
       objectReference: {fileID: 0}
     - target: {fileID: 2944935786244461157, guid: 7095c42ecc79bf54aac8cb261dc348a5,
         type: 3}
@@ -1869,6 +1869,11 @@ PrefabInstance:
       propertyPath: guns.Array.data[0]
       value: 
       objectReference: {fileID: 836050914}
+    - target: {fileID: 7647809106148225352, guid: e0db22c7fb5dced43843f7f12bfcbe8f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7647809106148225357, guid: e0db22c7fb5dced43843f7f12bfcbe8f,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
