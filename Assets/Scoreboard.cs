@@ -21,8 +21,9 @@ public class Scoreboard : MonoBehaviour
 
     }
 
-    public void ScoreHit()
+    public void ScoreHit(int points)
     {
-        score = score + scorePerHit;
+        score = score + points;
+        scoreText.text = score.ToString();
     }
 }
