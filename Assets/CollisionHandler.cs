@@ -35,5 +35,11 @@ public class CollisionHandler : MonoBehaviour
     {
         SendMessage("OnPlayerDeath");
         deathFX.SetActive(true);
+        Invoke("ReloadScene", 3);
+    }
+
+    private void ReloadScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
